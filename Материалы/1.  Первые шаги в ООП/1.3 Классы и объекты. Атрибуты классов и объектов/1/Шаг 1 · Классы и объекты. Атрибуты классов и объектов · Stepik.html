@@ -1,0 +1,3957 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://stepik.org/lesson/701973/step/1?unit=702074 -->
+<html class="no-js flexbox-gap" lang="ru" data-whatinput="mouse" data-whatintent="mouse"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+  
+  <link rel="search" type="application/opensearchdescription+xml" href="https://stepik.org/static/opensearch.xml?v2" title="Stepik">
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+  <link rel="dns-prefetch" href="https://stepik.azureedge.net/">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf_cookie_name" content="csrftoken">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="p:domain_verify" content="6e51efa10a4869846bae0b408c5aefcd">
+  <title>Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik</title>
+
+  
+  
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://stepik.org/static/classic/ico/favicon_152.png?v=1658158331">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://stepik.org/static/classic/ico/favicon_144.png?v=1658158331">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://stepik.org/static/classic/ico/favicon_120.png?v=1658158331">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://stepik.org/static/classic/ico/favicon_72.png?v=1658158331">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://stepik.org/static/classic/ico/favicon_57.png?v=1658158331">
+    <link rel="apple-touch-startup-image" href="https://stepik.org/static/classic/ico/startup-splash.png?v=1658158331">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_16.png?v=1658158331" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_32.png?v=1658158331" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_57.png?v=1658158331" sizes="57x57">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_72.png?v=1658158331" sizes="72x72">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_96.png?v=1658158331" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_120.png?v=1658158331" sizes="120x120">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_128.png?v=1658158331" sizes="128x128">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_144.png?v=1658158331" sizes="144x144">
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_152.png?v=1658158331" sizes="152x152">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_195.png?v=1658158331" sizes="195x195">
+    
+    <link rel="icon" type="image/png" href="https://stepik.org/static/classic/ico/favicon_228.png?v=1658158331" sizes="228x228">
+    
+    <meta name="msapplication-TileColor" content="#66cc66">
+    <meta name="msapplication-TileImage" content="/static/classic/ico/favicon_144.png?v=1658158331">
+  
+  <link rel="shortcut icon" href="https://stepik.org/static/classic/ico/favicon.ico">
+  <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://stepik.org/static/classic/ico/favicon.ico">
+  <link rel="canonical" href="https://stepik.org/lesson/733537/step/2?unit=735060">
+
+  
+    
+  
+
+  <meta property="og:site_name" content="Stepik: online education">
+  <meta property="og:url" content="https://stepik.org/lesson/733537/step/2?unit=735060">
+  <meta name="twitter:site" content="@stepikorg">
+  <meta name="fb:app_id" content="171127739724012">
+  <meta name="fb:admins" content="764047960">
+
+  
+
+<meta name="stepic/config/environment" content="%7B%22modulePrefix%22%3A%22stepic%22%2C%22environment%22%3A%22production%22%2C%22backendEnvironment%22%3A%22release%22%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22TRACK_USER_ORDER%22%3A1%2C%22CLIENT_ALLOWED_TIME_DELTA%22%3A60%2C%22PLATFORM_NEWS_FETCH_DELAY%22%3A5000%2C%22CSRF_COOKIE_NAME%22%3A%22csrftoken%22%2C%22API_NAME%22%3A%22self%22%2C%22PROFILE_PREVIEW_MODE_QP_NAME%22%3A%22profile-preview%22%2C%22ANALYTICS%22%3A%7B%22STUB_MODE%22%3Afalse%2C%22STUB_MODE_DEBUG%22%3A%22%22%2C%22GA_ENABLED%22%3Atrue%2C%22YM_ENABLED%22%3Atrue%2C%22AM_ENABLED%22%3Afalse%2C%22FB_ENABLED%22%3Atrue%2C%22VK_ENABLED%22%3Atrue%2C%22GA_GLOBAL_NAME%22%3A%22ga%22%2C%22YM_GLOBAL_NAME%22%3A%22ym%22%2C%22AM_GLOBAL_NAME%22%3A%22amplitude%22%2C%22FB_GLOBAL_NAME%22%3A%22fbq%22%2C%22VK_GLOBAL_NAME%22%3A%22VK%22%2C%22YM_KEY%22%3A%2230810146%22%2C%22AM_KEY%22%3A%2208041923a0649603910d54d9b55bf2d0%22%2C%22FB_KEY%22%3A%222632341313760664%22%2C%22VK_KEY%22%3A%22VK-RTRG-947663-fiEAi%22%7D%2C%22STATS%22%3A%7B%22IS_ENABLED%22%3Atrue%2C%22SEND_INTERVAL%22%3A20000%2C%22QUEUE_LEN_WARNING%22%3A1000%2C%22GAVEUP_INTERVAL%22%3A3600000%7D%2C%22SOCKS%22%3A%7B%22ENABLED%22%3Atrue%7D%2C%22STATIC_URL%22%3A%22static%2F%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22contentSecurityPolicy%22%3A%7B%22font-src%22%3A%22&#39;self&#39;%20data%3A%20fonts.gstatic.com%22%2C%22connect-src%22%3A%22&#39;self&#39;%22%2C%22style-src%22%3A%22&#39;self&#39;%20&#39;unsafe-inline&#39;%20fonts.googleapis.com%22%2C%22img-src%22%3A%22&#39;self&#39;%20play.google.com%20images.unsplash.com%20ucarecdn.com%22%7D%2C%22stripe_lib_url%22%3A%22https%3A%2F%2Fcheckout.stripe.com%2Fcheckout.js%22%2C%22firebase_lib_url%22%3A%22https%3A%2F%2Fwww.gstatic.com%2Ffirebasejs%2F4.5.0%2Ffirebase.js%22%2C%22kotlin_playground_url%22%3A%22https%3A%2F%2Funpkg.com%2Fkotlin-playground%401%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Afalse%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22LOG_RESOLVER%22%3Afalse%2C%22LOG_ACTIVE_GENERATION%22%3Afalse%2C%22LOG_TRANSITIONS%22%3Afalse%2C%22LOG_TRANSITIONS_INTERNAL%22%3Afalse%2C%22LOG_VIEW_LOOKUPS%22%3Afalse%2C%22name%22%3A%22stepic%22%2C%22version%22%3A%220.0.0%2B1417dd63%22%7D%2C%22ab_experiments%22%3A%7B%22SPRINT_ID%22%3A%22SPRINT_133%22%2C%22ACTIVE_EXPERIMENTS%22%3A%7B%7D%2C%22ACCEPTED_EXPERIMENTS%22%3A%7B%7D%2C%22REJECTED_EXPERIMENTS%22%3A%7B%7D%7D%2C%22ember-href-to%22%3A%7B%22ignore%22%3A%5B%22catch_all%22%5D%7D%2C%22pageTitle%22%3A%7B%22separator%22%3A%22%20%C2%B7%20%22%7D%2C%22%40sentry%2Fember%22%3A%7B%22disablePerformance%22%3Atrue%2C%22disableInstrumentComponents%22%3Atrue%2C%22disableRunloopPerformance%22%3Atrue%2C%22ignoreEmberOnErrorWarning%22%3Atrue%2C%22sentry%22%3A%7B%7D%7D%2C%22ember-backstop%22%3A%7B%22disableBackstop%22%3Atrue%2C%22screenshotsOnly%22%3Afalse%7D%2C%22exportApplicationGlobal%22%3Afalse%7D">
+<!-- EMBER_CLI_FASTBOOT_TITLE --><!-- EMBER_CLI_FASTBOOT_HEAD -->
+
+
+
+  <meta name="fragment" content="!">
+
+
+
+
+<meta name="google-play-app" content="app-id=org.stepic.droid">
+<meta name="apple-itunes-app" content="app-id=1064581926" app-argument="https://stepik.org/lesson/733537/step/2?unit=735060">
+
+
+
+<meta name="description" content="Как правильно выполнять задания курса">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Как правильно выполнять задания курса">
+<meta property="og:description" content="Как правильно выполнять задания курса">
+<link rel="alternate" type="application/json+oembed" href="https://stepik.org/oembed/?url=https://stepik.org/lesson/733537/step/2?unit=735060&amp;format=json" title="Как правильно выполнять задания курса">
+<link rel="alternate" type="application/xml+oembed" href="https://stepik.org/oembed/?url=https://stepik.org/lesson/733537/step/2?unit=735060&amp;format=xml" title="Как правильно выполнять задания курса">
+
+<meta property="og:image" content="https://ucarecdn.com/07f628cd-b808-4a77-93e2-82eab70f7a67/-/scale_crop/180x180/center/">
+<link rel="image_src" href="https://ucarecdn.com/07f628cd-b808-4a77-93e2-82eab70f7a67/-/scale_crop/180x180/center/">
+
+
+
+
+<script type="text/javascript" async="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/analytics.js"></script><script type="text/javascript" async="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/linkid.js"></script><script async="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/fbevents.js"></script><script async="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/tag.js"></script><script async="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/analytics.js"></script><script async="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/gtm.js"></script><script type="text/javascript">
+  var STEPIC_LOAD_ANALYTICS = function() {
+    
+    var initializers = {};
+
+initializers.ga = function() {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PFK8MN3');
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41633741-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+};
+
+initializers.ym = function() {
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+};
+
+initializers.am = function() {
+  (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+  ;r.type="text/javascript";r.async=true
+  ;r.src="https://cdn.amplitude.com/libs/amplitude-4.4.0-min.gz.js"
+  ;r.onload=function(){if(e.amplitude.runQueuedFunctions){
+  e.amplitude.runQueuedFunctions()}else{
+  console.log("[Amplitude] Error: could not load SDK")}}
+  ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+  ;function s(e,t){e.prototype[t]=function(){
+  this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+  var o=function(){this._q=[];return this}
+  ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+  ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+  ;return this}
+  ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+  ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+  ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+  ;function v(e){function t(t){e[t]=function(){
+  e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+  for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+  e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+  ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+  ;e.amplitude=n})(window,document);
+};
+
+initializers.fb = function() {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+};
+
+initializers.vk = function(key) {
+  !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init(key),VK.Retargeting.Hit()},document.head.appendChild(t)}();
+};
+
+return initializers;
+
+    
+  };
+</script>
+
+<link rel="preload" as="fetch" crossorigin="anonymous" href="https://stepik.azureedge.net/static/frontend-build/translations/ru.json?v=1658158331">
+<link rel="preload" as="image" href="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar.svg">
+
+
+
+
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+  
+<script type="text/javascript">
+  window.STEPIC_MAIN_CSS_URL = "https://stepik.azureedge.net/static/frontend-build/stepic.css?v=1658158331";
+</script>
+<link rel="preload" as="style" href="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/critical.css">
+<link rel="stylesheet" href="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/fonts.css">
+<link rel="stylesheet" href="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/vendor.css">
+<link href="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/vjs.css" rel="stylesheet"><link href="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/katex.css" rel="stylesheet"><link rel="stylesheet" href="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/critical.css">
+<link rel="stylesheet" href="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/stepic.css">
+
+<script type="text/javascript" async="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/openapi.js"></script><script type="text/javascript" async="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/openapi.js"></script><script src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/katex.js"></script><script src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/highlight.pack.js"></script><script src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/codemirror.js"></script><script src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/smooth-dnd.js"></script><style id="smooth-dnd-style-definitions" type="text/css">.smooth-dnd-container{position:relative;min-height:30px;min-width:30px;}.smooth-dnd-container.horizontal{display:table;}.smooth-dnd-container.horizontal > .smooth-dnd-stretcher-element{display:inline-block;}.smooth-dnd-container.horizontal > .smooth-dnd-draggable-wrapper{height:100%;display:table-cell;vertical-align:top;}.smooth-dnd-container.vertical > .smooth-dnd-draggable-wrapper{overflow:hidden;display:block;}.smooth-dnd-draggable-wrapper{box-sizing:border-box;}.smooth-dnd-draggable-wrapper.horizontal{height:100%;display:table-cell;vertical-align:top;}.smooth-dnd-draggable-wrapper.vertical{overflow:hidden;display:block;}.smooth-dnd-draggable-wrapper.animated{transition:transform ease;}.smooth-dnd-ghost{box-sizing:border-box;}.smooth-dnd-ghost.animated{transition:all ease-in-out;}.smooth-dnd-ghost *{pointer-events:none;}.smooth-dnd-disable-touch-action *{touch-actions:none;-ms-touch-actions:none;}.smooth-dnd-no-user-select{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}.smooth-dnd-drop-preview-inner-class{flex:1;}.smooth-dnd-container.horizontal > .smooth-dnd-drop-preview-constant-class{height:100%;overflow:hidden;display:table-cell;vertical-align:top;}.smooth-dnd-container.vertical > .smooth-dnd-drop-preview-constant-class{overflow:hidden;display:block;width:100%;}.smooth-dnd-drop-preview-flex-container-class{width:100%;height:100%;display:flex;justify-content:stretch;align-items:stretch;}.smooth-dnd-drop-preview-default-class{background-color:rgba(150, 150, 150, 0.1);border:1px solid #ccc;}</style><script src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/vjs.js"></script></head>
+<body class="ember-application" data-socks-connected="" data-route="step.index" style="--computed-header-height:50px; --no-initial-animate-duration: initial;">
+
+
+<!-- EMBER_CLI_FASTBOOT_BODY -->
+
+<script type="text/javascript">
+  try {
+    window.STEPIC_IS_EMBEDDED = window.self !== window.top;
+  } catch (e) {
+    // old IE and FF fails with "same origin" errors
+    window.STEPIC_IS_EMBEDDED = true;
+  }
+
+  if (window.STEPIC_IS_EMBEDDED) {
+    // Apply some css styles eagerly until frontend app is initialized.
+    document.body.setAttribute('data-embedded', '');
+    document.body.setAttribute('data-zen', '');
+  }
+</script>
+
+<script>
+  STEPIC_BUILD_VERSION = 1658158331;
+  STEPIC_BUILD_TAG = '268.0.16181';
+  STEPIC_SENTRY_DSN = 'https://d7bc6752554c4e9bb12e9f44947e5fd3@sentry.int.stepik.org/10';
+  STEPIC_SENTRY_ENVIRONMENT = 'stepik.org';
+
+  // Condition must be the same as for isInProfilePreviewMode in global-state service.
+  
+    __stepik_shoebox__ = JSON.parse('{\u0022stepics\u0022: [{\u0022id\u0022: 1, \u0022total_quizzes\u0022: 1504095, \u0022total_active\u0022: 395041, \u0022total_submissions\u0022: 716984019, \u0022user\u0022: 189309830, \u0022profile\u0022: 189309830, \u0022config\u0022: {\u0022project_name\u0022: \u0022Stepik\u0022, \u0022language\u0022: null, \u0022favicon\u0022: \u0022/static/classic/ico/favicon.ico\u0022, \u0022topbar_logo\u0022: \u0022/static/frontend/topbar_logo.svg\u0022, \u0022topbar_logo_small\u0022: \u0022/static/frontend/topbar_logo_small.svg\u0022, \u0022footer_logo\u0022: \u0022\u0022, \u0022index_logo\u0022: \u0022\u0022, \u0022index_text\u0022: \u0022\u0022, \u0022is_standard_footer\u0022: true, \u0022is_standard_index\u0022: true, \u0022is_full_profile\u0022: true, \u0022has_extra_favicons\u0022: true, \u0022has_language_selector\u0022: true, \u0022has_lessons_in_navbar\u0022: true, \u0022has_registration_link\u0022: true, \u0022has_course_review_tab\u0022: true, \u0022has_activity_graph\u0022: true, \u0022has_mobile_apps_banner\u0022: true, \u0022has_email_verification_alert\u0022: true, \u0022has_social_sharing\u0022: true, \u0022login_link\u0022: \u0022/login\u0022, \u0022is_public_social_accounts\u0022: true, \u0022can_set_password\u0022: true, \u0022can_change_name\u0022: true, \u0022can_change_email\u0022: true, \u0022can_change_language\u0022: true, \u0022can_change_city\u0022: true, \u0022cdn_url\u0022: \u0022https://stepik.azureedge.net\u0022, \u0022course_reviews_passed_percent\u0022: 80, \u0022courses_default_publicity\u0022: true, \u0022telegram_bot_name\u0022: \u0022StepicBot\u0022, \u0022is_public_telegram_bot\u0022: true, \u0022stripe_api_public_key\u0022: \u0022pk_live_vTMgNYTvMxpmKA0pN0ZQYoHT\u0022, \u0022paddle_vendor_id\u0022: \u002234377\u0022, \u0022project_help_center_url\u0022: \u0022http://support.stepik.org\u0022, \u0022project_domain\u0022: \u0022stepik.org\u0022, \u0022project_main_instance_url\u0022: \u0022https://stepik.org/\u0022, \u0022project_support_email\u0022: \u0022support@stepik.org\u0022, \u0022email_verify_warn_delay\u0022: 259200, \u0022classes_description_urls\u0022: {\u0022ru\u0022: \u0022http://welcome.stepik.org/ru/class\u0022, \u0022en\u0022: \u0022https://welcome.stepik.org/en/classroom\u0022}, \u0022is_lessons_disable_pro_features\u0022: true}, \u0022server_time\u0022: 1658325506.767419}], \u0022users\u0022: [{\u0022id\u0022: 189309830, \u0022profile\u0022: 189309830, \u0022is_private\u0022: false, \u0022is_active\u0022: true, \u0022is_guest\u0022: false, \u0022is_organization\u0022: false, \u0022short_bio\u0022: \u0022\u0022, \u0022details\u0022: \u0022\u0022, \u0022first_name\u0022: \u0022\u005Cu0412\u005Cu0430\u005Cu043d\u005Cu0451\u005Cu043a\u0022, \u0022last_name\u0022: \u0022\u005Cu0427\u005Cu0443\u005Cu0434\u005Cu043d\u005Cu043e\u005Cu0432\u005Cu0435\u005Cu0446\u0022, \u0022full_name\u0022: \u0022\u005Cu0412\u005Cu0430\u005Cu043d\u005Cu0451\u005Cu043a \u005Cu0427\u005Cu0443\u005Cu0434\u005Cu043d\u005Cu043e\u005Cu0432\u005Cu0435\u005Cu0446\u0022, \u0022alias\u0022: null, \u0022avatar\u0022: \u0022https://stepik.org/users/189309830/9358642def40f4be8af6dcccabe17c3fc98fa965/avatar.svg\u0022, \u0022cover\u0022: null, \u0022city\u0022: null, \u0022knowledge\u0022: 53, \u0022knowledge_rank\u0022: 1533994, \u0022reputation\u0022: 0, \u0022reputation_rank\u0022: null, \u0022join_date\u0022: \u00222020\u002D03\u002D05T23:51:40Z\u0022, \u0022social_profiles\u0022: [], \u0022solved_steps_count\u0022: 55, \u0022created_courses_count\u0022: 0, \u0022created_lessons_count\u0022: 0, \u0022issued_certificates_count\u0022: 0, \u0022followers_count\u0022: 0}], \u0022profiles\u0022: [{\u0022id\u0022: 189309830, \u0022first_name\u0022: \u0022\u005Cu0412\u005Cu0430\u005Cu043d\u005Cu0451\u005Cu043a\u0022, \u0022last_name\u0022: \u0022\u005Cu0427\u005Cu0443\u005Cu0434\u005Cu043d\u005Cu043e\u005Cu0432\u005Cu0435\u005Cu0446\u0022, \u0022full_name\u0022: \u0022\u005Cu0412\u005Cu0430\u005Cu043d\u005Cu0451\u005Cu043a \u005Cu0427\u005Cu0443\u005Cu0434\u005Cu043d\u005Cu043e\u005Cu0432\u005Cu0435\u005Cu0446\u0022, \u0022is_private\u0022: false, \u0022avatar\u0022: \u0022https://stepik.org/users/189309830/9358642def40f4be8af6dcccabe17c3fc98fa965/avatar.svg\u0022, \u0022language\u0022: \u0022ru\u0022, \u0022city\u0022: null, \u0022short_bio\u0022: \u0022\u0022, \u0022details\u0022: \u0022\u0022, \u0022subscribed_for_mail\u0022: true, \u0022notification_email_delay\u0022: \u00225m\u0022, \u0022notification_status\u0022: 189309830, \u0022is_staff\u0022: false, \u0022is_guest\u0022: false, \u0022is_creator\u0022: false, \u0022is_beta\u0022: false, \u0022can_add_lesson\u0022: true, \u0022can_add_course\u0022: true, \u0022can_add_group\u0022: false, \u0022subscribed_for_marketing\u0022: false, \u0022subscribed_for_partners\u0022: false, \u0022subscribed_for_news_en\u0022: true, \u0022subscribed_for_news_ru\u0022: false, \u0022bit_field\u0022: 0, \u0022level_abilities\u0022: [], \u0022has_password\u0022: true, \u0022social_accounts\u0022: [1438170], \u0022email_addresses\u0022: [3547606], \u0022is_email_verified\u0022: true, \u0022telegram_bot_url\u0022: \u0022https://telegram.me/StepicBot?start\u003DTVRnNU16QTVPRE13OjFvRUFEYTpLUjdCTDktcEx2X1hzRW0xWHFmN1JJbEl2azg\u0022, \u0022subscription_plan\u0022: null, \u0022experiment_choices\u0022: {}, \u0022allowed_pro_courses_count\u0022: 0, \u0022is_web_push_enabled\u0022: true, \u0022is_vote_notifications_enabled\u0022: true, \u0022last_login\u0022: \u00222022\u002D06\u002D01T18:37:12Z\u0022, \u0022ww_is_approved\u0022: false, \u0022ru_is_approved\u0022: false}]}');
+  
+</script>
+
+<script>
+/*! modernizr 3.6.0 (Custom Build) | MIT *
+ * https://modernizr.com/download/?-cssall-cssgrid_cssgridlegacy-fetch-olreversed !*/
+!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,s,i,l;for(var a in g)if(g.hasOwnProperty(a)){if(e=[],n=g[a],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],l=i.split("."),1===l.length?Modernizr[l[0]]=o:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=o),S.push((o?"":"no-")+l.join("-"))}}function s(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):_?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function i(e,n){return!!~(""+e).indexOf(n)}function l(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function a(e,n){return function(){return e.apply(n,arguments)}}function u(e,n,t){var o;for(var s in e)if(e[s]in n)return t===!1?e[s]:(o=n[e[s]],r(o,"function")?a(o,t||n):o);return!1}function f(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function d(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var s=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(s){var i=s.error?"error":"log";s[i].call(s,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function c(){var e=n.body;return e||(e=s(_?"svg":"body"),e.fake=!0),e}function p(e,t,r,o){var i,l,a,u,f="modernizr",d=s("div"),p=c();if(parseInt(r,10))for(;r--;)a=s("div"),a.id=o?o[r]:f+(r+1),d.appendChild(a);return i=s("style"),i.type="text/css",i.id="s"+f,(p.fake?p:d).appendChild(i),p.appendChild(d),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),d.id=f,p.fake&&(p.style.background="",p.style.overflow="hidden",u=w.style.overflow,w.style.overflow="hidden",w.appendChild(p)),l=t(d,e),p.fake?(p.parentNode.removeChild(p),w.style.overflow=u,w.offsetHeight):d.parentNode.removeChild(d),!!l}function m(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(f(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+f(n[o])+":"+r+")");return s=s.join(" or "),p("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==d(e,null,"position")})}return t}function y(e,n,o,a){function u(){d&&(delete b.style,delete b.modElem)}if(a=r(a,"undefined")?!1:a,!r(o,"undefined")){var f=m(e,o);if(!r(f,"undefined"))return f}for(var d,c,p,y,v,h=["modernizr","tspan","samp"];!b.style&&h.length;)d=!0,b.modElem=s(h.shift()),b.style=b.modElem.style;for(p=e.length,c=0;p>c;c++)if(y=e[c],v=b.style[y],i(y,"-")&&(y=l(y)),b.style[y]!==t){if(a||r(o,"undefined"))return u(),"pfx"==n?y:!0;try{b.style[y]=o}catch(g){}if(b.style[y]!=v)return u(),"pfx"==n?y:!0}return u(),!1}function v(e,n,t,o,s){var i=e.charAt(0).toUpperCase()+e.slice(1),l=(e+" "+T.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?y(l,n,o,s):(l=(e+" "+z.join(i+" ")+i).split(" "),u(l,n,t))}function h(e,n,r){return v(e,t,t,n,r)}var g=[],C={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){g.push({name:e,fn:n,options:t})},addAsyncTest:function(e){g.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr,Modernizr.addTest("fetch","fetch"in e);var w=n.documentElement;Modernizr.addTest("cssall","all"in w.style);var S=[],_="svg"===w.nodeName.toLowerCase();Modernizr.addTest("olreversed","reversed"in s("ol"));var x="Moz O ms Webkit",T=C._config.usePrefixes?x.split(" "):[];C._cssomPrefixes=T;var z=C._config.usePrefixes?x.toLowerCase().split(" "):[];C._domPrefixes=z;var P={elem:s("modernizr")};Modernizr._q.push(function(){delete P.elem});var b={style:P.elem.style};Modernizr._q.unshift(function(){delete b.style}),C.testAllProps=v,C.testAllProps=h,Modernizr.addTest("cssgridlegacy",h("grid-columns","10px",!0)),Modernizr.addTest("cssgrid",h("grid-template-rows","none",!0)),o(),delete C.addTest,delete C.addAsyncTest;for(var E=0;E<Modernizr._q.length;E++)Modernizr._q[E]();e.Modernizr=Modernizr}(window,document);
+/* isLegacyBrowser flag */
+/* olreversed & cssall - is needed to detect edge18 */
+!function(w){var m=w.Modernizr;w.isLegacyBrowser=!m.fetch||(!m.cssgrid&&!m.cssgridlegacy)||!m.olreversed||!m.cssall}(window);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script defer="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/vendor.js"></script>
+  <script src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/chunk.607.25bee43247943d1c831d.js" defer=""></script>
+<script src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/chunk.143.da64ec4f4385450115a1.js" defer=""></script>
+  <script defer="" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/stepic.js"></script>
+
+  <script>
+UPLOADCARE_LOCALE = "en";
+UPLOADCARE_LIVE = false;
+UPLOADCARE_TABS = "file url dropbox facebook vk gdrive box skydrive instagram evernote";
+UPLOADCARE_AUTOSTORE = true;
+UPLOADCARE_PUBLIC_KEY = "e7a075ad8dc9e3a1ec61";
+UPLOADCARE_CDN_BASE = 'https://ucarecdn.com/';
+UPLOADCARE_MANUAL_START = true;
+UPLOADCARE_EFFECTS = ['crop', 'rotate', 'mirror', 'flip', 'enhance'];
+
+</script>
+
+
+
+<script type="text/javascript" id="">!function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://vk.com/js/api/openapi.js?169";a.onload=function(){VK.Retargeting.Init("VK-RTRG-947663-fiEAi");VK.Retargeting.Hit()};document.head.appendChild(a)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-947663-fiEAi" style="position:fixed; left:-999px;" alt=""></noscript><meta name="facebook-domain-verification" content="m7mwf5gdihpg1jr2hfet6dma1qs7do"><script type="text/javascript" id="">fbq("trackCustom","scroll_30");</script><script type="text/javascript" id="">fbq("trackCustom","scroll_50");</script><script type="text/javascript" id="">fbq("trackCustom","scroll_90");</script>
+
+<div id="ember52" class="loading-slider ember-view"></div>
+
+<div id="ember53" class="woof-container ember-view"><!----></div>
+
+<header id="main-header" class="main-header no-print">
+  <!---->
+
+  <div id="custom-navbar-slot"></div>
+
+  <nav id="main-navbar" class="navbar" aria-label="Общая навигация по сайту">
+    <a href="https://stepik.org/" id="ember54" class="ember-view navbar__logo-link">
+      <picture>
+        <source srcset="/static/frontend/topbar_logo_small.svg" media="(max-width: 1024px)">
+        <img class="navbar__logo" alt="Stepik" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/topbar_logo.svg">
+      </picture>
+    </a>
+
+<!---->
+    <ul class="navbar__links">
+        <li class="navbar__menu-item" data-navbar-item="catalog">
+          <a href="https://stepik.org/catalog" id="ember55" class="ember-view navbar__link st-link">
+            Каталог
+          </a>
+        </li>
+
+        <li class="navbar__menu-item" data-navbar-item="learn">
+          <a href="https://stepik.org/learn" id="ember56" class="ember-view navbar__link st-link">
+            Моё обучение
+          </a>
+        </li>
+
+        <li class="navbar__menu-item" data-navbar-item="teach">
+            <a class="navbar__link st-link" href="https://teach.stepik.org/ru" target="_blank" rel="noopener noreferrer">
+              Преподавание
+            </a>
+        </li>
+    </ul>
+
+    <div id="main-navbar-body-slot">      <div class="player-topbar__panel">
+          <div class="player-topbar__step-pins">
+              <div data-step-position="1" data-is-attempted="" data-is-passed="" data-is-active="" id="ember28381" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/1?unit=702074" id="ember28382" class="active ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28383" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28384" class="svg-icon null_icon ember-view step-pin-icon__icon"><!----></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="2" id="ember28385" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/2?unit=702074" id="ember28386" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28387" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28388" class="svg-icon easy-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#easy-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="3" id="ember28389" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/3?unit=702074" id="ember28390" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28391" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28392" class="svg-icon easy-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#easy-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="4" id="ember28393" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/4?unit=702074" id="ember28394" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28395" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28396" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="5" id="ember28397" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/5?unit=702074" id="ember28398" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28399" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28400" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="6" id="ember28401" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/6?unit=702074" id="ember28402" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28403" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28404" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="7" id="ember28405" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/7?unit=702074" id="ember28406" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28407" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28408" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="8" id="ember28409" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/8?unit=702074" id="ember28410" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28411" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28412" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="9" id="ember28413" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/9?unit=702074" id="ember28414" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28415" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28416" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="10" id="ember28417" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/10?unit=702074" id="ember28418" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28419" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28420" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="11" id="ember28421" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/11?unit=702074" id="ember28422" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28423" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28424" class="svg-icon hard-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#hard-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="12" id="ember28425" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/12?unit=702074" id="ember28426" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28427" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28428" class="svg-icon easy-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#easy-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="13" id="ember28429" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/13?unit=702074" id="ember28430" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28431" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28432" class="svg-icon easy-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#easy-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="14" id="ember28433" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/14?unit=702074" id="ember28434" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28435" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28436" class="svg-icon easy-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#easy-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+              <div data-step-position="15" id="ember28437" class="m-step-pin ember-view player__step-pin"><a href="https://stepik.org/lesson/701973/step/15?unit=702074" id="ember28438" class="ember-view m-step-pin__link">
+  <span class="m-step-pin__pin">
+    <div id="ember28439" class="step-pin-icon ember-view m-step-pin__icon"><span id="ember28440" class="svg-icon easy-quiz_icon ember-view step-pin-icon__icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#easy-quiz"></use>
+  </svg></span>
+
+<!----></div>
+  </span>
+
+<!----></a>
+</div>
+          </div>
+
+          <div class="player-topbar__user-controls">
+<!---->          </div>
+      </div>
+</div>
+
+    <div class="navbar__spacer"></div>
+
+      <form class="navbar__search-form" data-ember-action="" data-ember-action-57="57">
+        <div id="ember58" class="ember-view"><span id="ember59" class="with-autocomplete ember-view"><div id="ember60" class="drop-down drop-down-menu ember-view with-autocomplete__drop-down">
+  <div aria-expanded="false" aria-haspopup="true" id="ember61" class="drop-down__toggler drop-down-toggler ember-view">  
+    <div class="with-autocomplete__content">
+      
+  <div class="navbar__search-wrapper st-input-wrapper st-input-wrapper_border-none st-input-wrapper_type-search">
+    <input class="navbar__search-input st-input st-input_border_none" aria-label="Search" placeholder="Поиск…" type="search">
+  </div>
+
+    </div>
+  
+</div>
+
+<!---->
+
+<!----></div></span></div>
+      </form>
+
+        <div id="ember62" class="drop-down drop-down-menu ember-view language-selector">
+    <div aria-expanded="false" aria-haspopup="true" id="ember63" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+      <button class="navbar__submenu-toggler st-button_style_none" type="button">
+        Русский
+        <span id="ember64" class="svg-icon down-arrow_icon ember-view navbar__down-arrow"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+    
+</div>
+
+    <!---->
+  
+
+<!----></div>
+
+
+      <div class="navbar__divider"></div>
+
+      <div id="ember65" class="drop-down drop-down-menu ember-view navbar__profile">
+        <div aria-expanded="false" aria-haspopup="true" id="ember66" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+          <button class="navbar__profile-toggler st-button_style_none" aria-label="Profile" aria-describedby="profile-notifications-badge platform-news-badge" type="button">
+            <img class="navbar__profile-img" alt="User avatar" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar.svg">
+
+              <span id="profile-notifications-badge" class="navbar__profile-notifications-badge" aria-label="0 notifications" data-count="0">
+                0
+              </span>
+
+              <span id="platform-news-badge" class="navbar__profile-news-badge platform-news-badge" aria-label="You have unread platform news"></span>
+          </button>
+        
+</div>
+
+        <!---->
+      
+
+<!----></div>
+  </nav>
+</header>
+
+<!---->
+
+<div id="breadcrumbs" class="breadcrumbs-row"></div>
+
+<main class="main-content">
+  
+
+<div data-step-type="text" id="ember11521" class="lesson-modern__main lesson-wrapper in-course ember-view">
+  <div id="ember11522" class="ember-view"><!----></div>
+
+  <div class="lesson-modern__body">
+      <div data-pinned="" id="ember20593" class="lesson-sidebar ember-view player-lesson-sidebar player__lesson-sidebar"><button class="lesson-sidebar__expand-sidebar" aria-label="Expand course contents sidebar" type="button">
+  <span class="lesson-sidebar__expand-sidebar-content">
+    <span id="ember20594" class="svg-icon arrow-right_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#arrow-right"></use>
+  </svg></span>
+    <span>Содержание</span>
+  </span>
+</button>
+
+<div class="lesson-sidebar__wrapper">
+  <div class="lesson-sidebar__body">
+    
+      <div class="lesson-sidebar__header">
+          <a title="Добрый, добрый Python ООП - обучающий курс от Сергея Балакирева" href="https://stepik.org/course/116336" id="ember20595" class="ember-view lesson-sidebar__course-title">
+            Добрый, добрый Python ООП - обучающий курс от Сергея Балакирева
+          </a>
+
+          <button class="st-button_style_none lesson-sidebar__pin-sidebar" aria-label="Unpin course contents sidebar" type="button" data-ember-action="" data-ember-action-20596="20596">
+            <span id="ember20597" class="svg-icon pin_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#pin"></use>
+  </svg></span>
+          </button>
+
+            <div class="lesson-sidebar__course-progress-wrap">
+              <p class="lesson-sidebar__course-progress">Прогресс по курсу:
+                <span>&nbsp;9/695</span>
+              </p>
+              <span aria-valuemax="695" aria-valuemin="0" aria-valuenow="9" role="progressbar" id="ember20598" class="progress-line ember-view lesson-sidebar__progress-line">  <svg height="8px" width="214px">
+    <line class="progress-line__full-line" x1="4px" y1="4px" x2="210px" y2="4px" stroke-width="4px" stroke-linecap="round"></line>
+      <line class="progress-line__progress" x1="4px" y1="4px" x2="-1.2287769784172662px" y2="4px" stroke-width="4px" stroke-linecap="round"></line>
+
+      <circle cx="167.9" cy="4" r="5" stroke-width="3.5" class="progress-line__marker "></circle>
+      <circle cx="188.05395683453236" cy="4" r="5" stroke-width="3.5" class="progress-line__marker "></circle>
+  </svg>
+<span aria-hidden="true" class="progress-line__numbers ">
+  9 / 695
+</span></span>
+
+                
+            </div>
+      </div>
+
+      <div class="lesson-sidebar__content custom-scrollbar custom-scrollbar_dark">
+        <nav id="ember20599" class="toc-sections ember-view lesson-sidebar__toc" aria-label="Навигация по курсу">    <div class="lesson-sidebar__module-header sidebar-module-header" data-section="238820" role="directory" aria-expanded="false">
+      <div class="line-progress-bar">&nbsp;</div>
+        <div class="line-progress-bar-green" style="height: 22%;">
+          &nbsp;
+        </div>
+<!---->      <div class="sidebar-module-header__title">
+        1&nbsp;&nbsp;Первые шаги в ООП
+      </div>
+      
+    </div>
+
+    <div class="lesson-sidebar__toc-inner" data-section="238820">
+        
+          <div data-unit="735060" id="ember20600" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/733537?unit=735060" id="ember25902" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 100%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          1.1&nbsp;&nbsp;Как правильно выполнять задания курса
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702064" id="ember20602" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701963?unit=702064" id="ember25901" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 100%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          1.2&nbsp;&nbsp;Концепция ООП простыми словами
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702074" id="ember20604" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701973?unit=702074" id="ember25900" class="active ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 7%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          1.3&nbsp;&nbsp;Классы и объекты. Атрибуты классов и объектов
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702075" id="ember20606" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701974?unit=702075" id="ember25898" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          1.4&nbsp;&nbsp;Методы классов. Параметр self
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702076" id="ember20608" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701975?unit=702076" id="ember25899" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          1.5&nbsp;&nbsp;Инициализатор __init__ и финализатор __del__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702077" id="ember20610" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701976?unit=702077" id="ember25896" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          1.6&nbsp;&nbsp;Магический метод __new__. Пример паттерна Singleton
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702079" id="ember20612" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701978?unit=702079" id="ember25897" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 8%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          1.7&nbsp;&nbsp;Методы класса (classmethod) и статические методы (staticmethod)
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="710450" id="ember20614" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/709885?unit=710450" id="ember25895" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          1.8&nbsp;&nbsp;Испытание свойствами и методами
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+    </div>
+
+    <div class="lesson-sidebar__module-header sidebar-module-header" data-section="238822" role="directory" aria-expanded="false">
+      <div class="line-progress-bar">&nbsp;</div>
+        <div class="line-progress-bar-green" style="height: 9%;">
+          &nbsp;
+        </div>
+<!---->      <div class="sidebar-module-header__title">
+        2&nbsp;&nbsp;Режимы доступа, свойства и дескрипторы
+      </div>
+      
+    </div>
+
+    <div class="lesson-sidebar__toc-inner" data-section="238822">
+        
+          <div data-unit="702084" id="ember20616" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701983?unit=702084" id="ember25894" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          2.1&nbsp;&nbsp;Режимы доступа public, private, protected. Сеттеры и геттеры
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702085" id="ember20618" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701984?unit=702085" id="ember25893" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          2.2&nbsp;&nbsp;Свойства property. Декоратор @property
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702086" id="ember20620" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701985?unit=702086" id="ember25892" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          2.3&nbsp;&nbsp;Дескрипторы (data descriptor и non-data descriptor)
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+    </div>
+
+    <div class="lesson-sidebar__module-header sidebar-module-header" data-section="238823" role="directory" aria-expanded="false">
+      <div class="line-progress-bar">&nbsp;</div>
+        <div class="line-progress-bar-green" style="height: 10%;">
+          &nbsp;
+        </div>
+<!---->      <div class="sidebar-module-header__title">
+        3&nbsp;&nbsp;Магические методы классов
+      </div>
+      
+    </div>
+
+    <div class="lesson-sidebar__toc-inner" data-section="238823">
+        
+          <div data-unit="702087" id="ember20622" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701986?unit=702087" id="ember20703" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.1&nbsp;&nbsp;Методы __setattr__, __getattribute__, __getattr__ и __delattr__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702088" id="ember20624" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701987?unit=702088" id="ember20704" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 18%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.2&nbsp;&nbsp;Метод __call__. Функторы и классы-декораторы
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702089" id="ember20626" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701988?unit=702089" id="ember20705" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.3&nbsp;&nbsp;Методы __str__, __repr__, __len__, __abs__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702090" id="ember20628" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701989?unit=702090" id="ember20706" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.4&nbsp;&nbsp;Методы __add__, __sub__, __mul__, __truediv__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702091" id="ember20630" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701990?unit=702091" id="ember20707" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.5&nbsp;&nbsp;Сравнения __eq__, __ne__, __lt__, __gt__ и другие
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702092" id="ember20632" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701991?unit=702092" id="ember20708" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.6&nbsp;&nbsp;Методы __eq__ и __hash__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702093" id="ember20634" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701992?unit=702093" id="ember20709" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 10%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.7&nbsp;&nbsp;Метод __bool__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702094" id="ember20636" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701993?unit=702094" id="ember20710" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.8&nbsp;&nbsp;Методы __getitem__, __setitem__ и __delitem__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702095" id="ember20638" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701994?unit=702095" id="ember20711" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.9&nbsp;&nbsp;Методы __iter__ и __next__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="717930" id="ember20640" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/717070?unit=717930" id="ember20712" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          3.10&nbsp;&nbsp;Испытание магией
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+    </div>
+
+    <div class="lesson-sidebar__module-header sidebar-module-header" data-section="238824" role="directory" aria-expanded="false">
+      <div class="line-progress-bar">&nbsp;</div>
+        <div class="line-progress-bar-green" style="height: 5%;">
+          &nbsp;
+        </div>
+<!---->      <div class="sidebar-module-header__title">
+        4&nbsp;&nbsp;Наследование и полиморфизм
+      </div>
+      
+    </div>
+
+    <div class="lesson-sidebar__toc-inner" data-section="238824">
+        
+          <div data-unit="702096" id="ember20642" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701995?unit=702096" id="ember20713" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          4.1&nbsp;&nbsp;Наследование в объектно-ориентированном программировании
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702097" id="ember20644" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701996?unit=702097" id="ember20714" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          4.2&nbsp;&nbsp;Функция issubclass(). Наследование от встроенных типов
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702098" id="ember20646" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701997?unit=702098" id="ember23194" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          4.3&nbsp;&nbsp;Наследование. Функция super() и делегирование
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702099" id="ember20648" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701998?unit=702099" id="ember23195" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          4.4&nbsp;&nbsp;Наследование. Атрибуты private и protected
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702100" id="ember20650" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/701999?unit=702100" id="ember23196" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 9%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          4.5&nbsp;&nbsp;Полиморфизм и абстрактные методы
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702101" id="ember20652" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/702000?unit=702101" id="ember23197" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          4.6&nbsp;&nbsp;Множественное наследование
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702102" id="ember20654" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/702001?unit=702102" id="ember23198" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          4.7&nbsp;&nbsp;Коллекция __slots__
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="725686" id="ember20656" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/724551?unit=725686" id="ember23199" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          4.8&nbsp;&nbsp;Испытание "Бремя наследия"
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+    </div>
+
+    <div class="lesson-sidebar__module-header sidebar-module-header" data-section="238825" role="directory" aria-expanded="false">
+      <div class="line-progress-bar">&nbsp;</div>
+        <div class="line-progress-bar-green" style="height: 5%;">
+          &nbsp;
+        </div>
+<!---->      <div class="sidebar-module-header__title">
+        5&nbsp;&nbsp;Исключения и менеджеры контекста
+      </div>
+      
+    </div>
+
+    <div class="lesson-sidebar__toc-inner" data-section="238825">
+        
+          <div data-unit="702103" id="ember20658" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/702002?unit=702103" id="ember23200" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          5.1&nbsp;&nbsp;Введение в обработку исключений. Блоки try / except
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702104" id="ember20660" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/702003?unit=702104" id="ember23201" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          5.2&nbsp;&nbsp;Обработка исключений. Блоки finally и else
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702105" id="ember20662" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/702004?unit=702105" id="ember23202" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 14%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          5.3&nbsp;&nbsp;Распространение исключений (propagation exceptions)
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702106" id="ember20664" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/702005?unit=702106" id="ember23203" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          5.4&nbsp;&nbsp;Инструкция raise и пользовательские исключения
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="702107" id="ember20666" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/702006?unit=702107" id="ember23204" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 13%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          5.5&nbsp;&nbsp;Менеджеры контекстов. Оператор with
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+        
+          <div data-unit="728924" id="ember20668" class="with-lazy-loading toc-lesson ember-view"><div>
+      <a href="https://stepik.org/lesson/727588?unit=728924" id="ember23205" class="ember-view lesson-sidebar__lesson">
+        <div class="line-progress-bar">&nbsp;</div>
+
+          <div class="line-progress-bar-green" style="height: 0%;">
+            &nbsp;
+          </div>
+
+        <span class="lesson-sidebar__lesson-name">
+          5.6&nbsp;&nbsp;Посвящение в объектно-ориентированное программирование
+        </span>
+
+        
+      </a>
+</div>
+</div>
+        
+    </div>
+
+</nav>
+      </div>
+
+        <div class="lesson-sidebar__footer">
+          <ul class="lesson-controls" role="toolbar" aria-label="Настройки">
+            <li class="lesson-controls__item">
+              <button class="button_style_secondary" title="Полноэкранный режим" type="button" data-ember-action="" data-ember-action-20670="20670">
+                <span id="ember20671" class="svg-icon fullscreen_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#fullscreen"></use>
+  </svg></span>
+              </button>
+            </li>
+
+<!---->
+            <li class="lesson-controls__item">
+              <div>
+                <div id="ember20672" class="drop-down drop-down-menu ember-view">
+                  <div aria-expanded="false" aria-haspopup="true" id="ember20673" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+                    <button class="button_style_secondary" type="button">
+                      <span id="ember20674" class="svg-icon settings_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#settings"></use>
+  </svg></span>
+                    </button>
+                  
+</div>
+
+                  <!---->
+                
+
+<!----></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    
+<span data-tippy-singleton-source="" hidden=""></span>
+  </div>
+</div>
+</div>
+
+    <div class="lesson-modern__wrapper">
+        <div id="ember11649" class="lesson-modern__top-panel ember-view"><div class="top-tools page-fragment">
+  <div class="top-tools__lesson-name">
+      1.3
+    Классы и объекты. Атрибуты классов и объектов
+  </div>
+      <div class="top-tools__progress">
+        <span>1</span>
+        из
+        <span>15 шагов</span>
+        пройден
+      </div>
+      <div class="top-tools__progress">
+        <span>0</span>
+        из
+        <span>22 баллов</span>&nbsp;
+        получено
+      </div>
+  
+<!----></div>
+</div>
+
+      <div class="lesson lesson-modern">
+<!---->
+<!----><!---->
+<!---->
+        
+
+<div class="lesson__player">
+  <div class="player-content-wrapper">
+          <article id="ember28441" class="step-show ember-view"><div class="step-dynamic-container">
+<!---->
+      <div id="ember28442" class="step-view step-view_material ember-view"><!----><div class="step-wrapper">
+  <div class="step-inner page-fragment">
+      <div id="ember28443" class="html-content rich-text-viewer ember-view" data-processed=""><!----><span><h1>Песнь 2. Классы и объекты. Атрибуты классов и объектов</h1>
+
+<p style="text-align: center;"><iframe allowfullscreen="" height="450" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/P4CNNo8jWj4.html" width="800"></iframe></p>
+
+<p>Текст песни:&nbsp;<a href="https://proproprogs.ru/python_oop/klassy-i-obekty-atributy-klassov-i-obektov" rel="noopener noreferrer nofollow" target="_blank">https://proproprogs.ru/python_oop/klassy-i-obekty-atributy-klassov-i-obektov</a></p>
+
+<p>Дорогие друзья! В комментариях к задачам не пишите решений, только обсуждения самой задачи. Решение можно будет привести на вкладке "Решения" &nbsp;после верного ответа.</p></span></div>
+      </div>
+</div>
+</div>
+</div>
+</article>
+      
+      <!---->
+  </div>
+</div>
+
+<hr class="modern-lesson-divider">
+  <div class="lesson__footer no-print">
+  <div class="page-fragment lesson__footer-wrapper">
+      <div id="ember11654" class="vote-widget vote-widget_target_liked vote-widget_target_abused ember-view lesson__likes-widget"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-11655="11655">
+  <span id="ember11656" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    469
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не оценил." role="button" tabindex="0" data-ember-action="" data-ember-action-11657="11657">
+    <span id="ember11658" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+      20
+  </span>
+</div>
+
+        <span class="lesson__step-title">
+          Шаг 1
+        </span>
+
+<!---->
+      <div class="lesson__update-date">
+        Последнее обновление:
+        16.06.2022
+      </div>
+
+    <div class="lesson__footer-nav-buttons">
+        <button class="lesson__next-btn button has-icon" type="button" data-ember-action="" data-ember-action-11659="11659">
+          <span>
+            Следующий шаг
+          </span>
+          <span data-mobile-caption="">
+            Дальше
+          </span>
+          <span id="ember11660" class="svg-icon right-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#right-arrow"></use>
+  </svg></span>
+        </button>
+    </div>
+  </div>
+</div>
+
+  <div class="lesson__discussions-wrapper">
+    <div class="page-fragment">
+        <div id="ember11661" class="discussions-list ember-view"> <div class="discussions__header" id="discussions">
+  <ul class="tab tab--border">
+    <li class="tab__item discussions__tab" data-active="">
+      <a href="https://stepik.org/lesson/701973/step/1?unit=702074" id="ember11662" class="active ember-view">
+        <span class="tab__item-counter" data-value="25"></span>
+        Комментариев
+      </a>
+    </li>
+
+<!---->
+      <li class="tab__item tab__item--action">
+        <span id="ember28444" class="svg-icon sort_icon ember-view discussions__sorting-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#sort"></use>
+  </svg></span>
+        <select class="st-select st-select_font_normal discussions__sorting">
+            <option value="default">
+              Самые популярные
+            </option>
+            <option value="by_date">
+              Новые обсуждения
+            </option>
+            <option value="active">
+              Самые обсуждаемые
+            </option>
+            <option value="recent">
+              Свежие обновления
+            </option>
+        </select>
+      </li>
+  </ul>
+</div>
+
+
+  <div class="discussions__community-rules">
+    Будьте вежливы и соблюдайте наши <a href="https://support.stepik.org/hc/ru/articles/4407228615058" target="_blank"> принципы сообщества</a>.
+      Пожалуйста, не оставляйте решения и подсказки в комментариях, для этого есть отдельный форум.
+  </div>
+
+  <div id="ember11663" class="comment-widget-avatar ember-view discussions__comment-input"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember11664" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/189309830" id="ember11665" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar.svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+    <div id="ember11666" class="comment-input ember-view">    <div class="comment-input__bait" role="button" data-ember-action="" data-ember-action-11667="11667">
+      Оставить комментарий
+    </div>
+</div>
+  
+</div>
+</div>
+
+<div class="discussions__list">
+<!---->
+        <div data-animation-stop="" id="ember28446" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28447" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28448" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/398596006" id="ember28449" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar.png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28450" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/398596006" id="ember28451" class="ember-view comments-user-badge__name">
+  Grigorii Tashu
+<!----></a>
+</div>
+
+          <time datetime="2022-05-31T07:28:50.000Z" title="вторник, 31 мая 2022 г., 10:28 GMT+3" class="comment-widget__date">
+            2 месяца назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28452" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><pre><code class="hljs 1c">setattr(Point, 'prop', <span class="hljs-number">1</span>) <span style="background-color: #ffffff; color: #222222; font-size: 1em;">- <span class="hljs-function"><span class="hljs-keyword">функция</span> <span class="hljs-title">создает</span> <span class="hljs-title">новый</span> <span class="hljs-title">атрибут</span> в <span class="hljs-title">указанном</span> <span class="hljs-title">пространстве</span> <span class="hljs-title">имен</span> (в <span class="hljs-params">данном случае в классе Point</span></span>) с заданным значением.</span></code></pre>
+
+<pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">getattr</span><span class="hljs-params">(Point, <span class="hljs-string">'a'</span>, False)</span></span> <span style="background-color: #ffffff; color: #222222; font-size: 1em;">- </span><span style="background-color: #ffffff; color: #222222; font-size: 1em;">функция для обращения к тому или иному атрибуту класса,&nbsp; ей пользуются только в том случае, если есть опасность обращения к несуществующим атрибутам.</span></code>&nbsp;<code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">delattr</span><span class="hljs-params">(Point, <span class="hljs-string">'type_pt'</span>)</span></span> <span style="background-color: #ffffff; color: #222222; font-size: 1em;">- функция для удаления атрибута.</span></code></pre>
+
+<pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">hasattr</span><span class="hljs-params">(Point, <span class="hljs-string">'prop'</span>)</span></span><span style="background-color: #ffffff; color: #222222; font-size: 1em;"> - проверка существования того или иного свойства атрибута.</span></code></pre></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28453" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28454="28454">
+  <span id="ember28455" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    46
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28456="28456">
+    <span id="ember28457" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28458="28458">
+        Ответить
+      </button>
+
+      <button class="comment-widget__show-replies comment-widget__footer-button btn-link link_no-static-line" title="показать / скрыть ответы к комментарию" type="button" data-ember-action="" data-ember-action-28459="28459">
+          Посмотреть 2 ответа
+<!---->          <span id="ember28460" class="svg-icon down-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+
+      <span id="ember28461" class="comment-menu ember-view comment-widget__menu"><div id="ember28462" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28463" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28464" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28465" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28466" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28467" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/355291942" id="ember28468" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(1).png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28469" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/355291942" id="ember28470" class="ember-view comments-user-badge__name">
+  Тимохин Евгений
+<!----></a>
+</div>
+
+          <time datetime="2022-06-01T11:02:34.000Z" title="среда, 1 июня 2022 г., 14:02 GMT+3" class="comment-widget__date">
+            2 месяца назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;" data-truncatable="" data-expanded="">
+    <div class="show-more__content">
+      
+              <div id="ember28471" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>В видео сказано:</p>
+
+<blockquote>
+<p>Поиск того или иного атрибута выполняется следующим образом: сначала он ищется в текущем пространстве имён, а если не находится здесь, то берётся из следующего внешнего, на которое ссылается внутреннее пространство.</p>
+</blockquote>
+
+<p>Это правда, но, как говорится: не вся правда ) Я тут наткнулся на одну схему и теперь ношусь с ней как пингвин с яйцом. Помогла мне лучше понять многие моменты. Схема демонстрирует более подробную схему как всё происходит при обращении к атрибуту через экземпляр:</p>
+
+<pre><code class="hljs stylus"><span class="hljs-selector-tag">a</span>.<span class="hljs-attribute">color</span></code></pre>
+
+<p>Всё это можно прочитать в серьёзных справочниках, но так наглядней, воспринимать такую инфу в виде монолитного текста, мягко скажем, не удобно.</p>
+
+<p>Так же оговорюсь, что схема на вырост. Она связана с темами связанных методов, дескрипторов, магических методов и т.д. Но всё это будет в курсе. И всё таки я решил запостить её в самом начале ) Чтобы можно было к ней в последствии возвращаться ))</p>
+
+<p><img alt="" height="870" name="object-attribute-lookup-v3.png" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/object-attribute-lookup-v3.png" width="636"></p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+                <button class="comment-widget__show-more-toggler btn-details btn-details_theme_primary" aria-expanded="true" type="button">Свернуть</button>
+            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28472" class="vote-widget vote-widget_target_liked vote-widget_target_abused ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28473="28473">
+  <span id="ember28474" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    30
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28475="28475">
+    <span id="ember28476" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+      1
+  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28477="28477">
+        Ответить
+      </button>
+
+      <button class="comment-widget__show-replies comment-widget__footer-button btn-link link_no-static-line" title="показать / скрыть ответы к комментарию" type="button" data-ember-action="" data-ember-action-28478="28478">
+          Посмотреть 13 ответов
+            <span class="comment-widget__staff-replied">
+              (ответ преподавателя)
+            </span>
+          <span id="ember28479" class="svg-icon down-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+
+      <span id="ember28480" class="comment-menu ember-view comment-widget__menu"><div id="ember28481" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28482" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28483" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28484" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28485" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28486" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/385370688" id="ember28487" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(2).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28488" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/385370688" id="ember28489" class="ember-view comments-user-badge__name">
+  Алексей Виноградов
+<!----></a>
+</div>
+
+          <time datetime="2022-06-11T05:21:24.000Z" title="суббота, 11 июня 2022 г., 08:21 GMT+3" class="comment-widget__date">
+            в прошлом месяце
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28490" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Как боженька разжевал.</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28491" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28492="28492">
+  <span id="ember28493" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    7
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28494="28494">
+    <span id="ember28495" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28496="28496">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28497" class="comment-menu ember-view comment-widget__menu"><div id="ember28498" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28499" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28500" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28501" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28502" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28503" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/331863574" id="ember28504" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(3).png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28505" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/331863574" id="ember28506" class="ember-view comments-user-badge__name">
+  Dragosh Vladimir
+<!----></a>
+</div>
+
+          <time datetime="2022-06-05T17:23:36.000Z" title="воскресенье, 5 июня 2022 г., 20:23 GMT+3" class="comment-widget__date">
+            в прошлом месяце
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28507" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Сергей, я имел удовольствие знакомиться с ООП и Классами на ДжаваРаш. Ваша подача материала мне более импанирует.&nbsp;</p>
+
+<p>Спасибо Вам за Курсы!</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28508" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28509="28509">
+  <span id="ember28510" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    6
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28511="28511">
+    <span id="ember28512" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28513="28513">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28514" class="comment-menu ember-view comment-widget__menu"><div id="ember28515" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28516" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28517" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28518" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28519" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28520" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/128550291" id="ember28521" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(4).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28522" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/128550291" id="ember28523" class="ember-view comments-user-badge__name">
+  Александр Григоренко
+<!----></a>
+</div>
+
+          <time datetime="2022-07-01T08:27:14.000Z" title="пятница, 1 июля 2022 г., 11:27 GMT+3" class="comment-widget__date">
+            19 дней назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28524" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Java и C# нервно захлёбываются в истерических рыданиях от такого ООП в python - так больно им)).&nbsp; Когда статические переменные вдруг становятся переменными на уровне объекта, а потом вдруг могут снова стать статическими - это, конечно, жесть. Но, как говорится, если привыкнуть к своим особенностям языка, то любой инструмент будет работать так, как нам надо в независимости от языка программирования.</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28525" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28526="28526">
+  <span id="ember28527" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    4
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28528="28528">
+    <span id="ember28529" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28530="28530">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28531" class="comment-menu ember-view comment-widget__menu"><div id="ember28532" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28533" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28534" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28535" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28536" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28537" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/363913890" id="ember28538" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(5).png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28539" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/363913890" id="ember28540" class="ember-view comments-user-badge__name">
+  Саша Асеев
+<!----></a>
+</div>
+
+          <time datetime="2022-06-06T18:45:24.000Z" title="понедельник, 6 июня 2022 г., 21:45 GMT+3" class="comment-widget__date">
+            в прошлом месяце
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28541" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>по пеп8 после докстринга в классах необходимо оставлять пустую строку</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28542" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28543="28543">
+  <span id="ember28544" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    3
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28545="28545">
+    <span id="ember28546" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28547="28547">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28548" class="comment-menu ember-view comment-widget__menu"><div id="ember28549" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28550" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28551" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28552" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28553" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28554" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/3564290" id="ember28555" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(6).png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28556" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/3564290" id="ember28557" class="ember-view comments-user-badge__name">
+  Владимир Матиевский
+<!----></a>
+</div>
+
+          <time datetime="2022-06-01T08:19:28.000Z" title="среда, 1 июня 2022 г., 11:19 GMT+3" class="comment-widget__date">
+            2 месяца назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28558" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Интересное название лекции Песнь 2;&nbsp;Текст песни</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28559" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28560="28560">
+  <span id="ember28561" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    3
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28562="28562">
+    <span id="ember28563" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28564="28564">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28565" class="comment-menu ember-view comment-widget__menu"><div id="ember28566" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28567" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28568" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28569" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28570" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28571" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/472574799" id="ember28572" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(7).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28573" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/472574799" id="ember28574" class="ember-view comments-user-badge__name">
+  Vladimir Klementev
+<!----></a>
+</div>
+
+          <time datetime="2022-06-05T11:40:23.000Z" title="воскресенье, 5 июня 2022 г., 14:40 GMT+3" class="comment-widget__date">
+            в прошлом месяце
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28575" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Сколько по времени проходить данный курс?</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28576" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28577="28577">
+  <span id="ember28578" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    2
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28579="28579">
+    <span id="ember28580" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28581="28581">
+        Ответить
+      </button>
+
+      <button class="comment-widget__show-replies comment-widget__footer-button btn-link link_no-static-line" title="показать / скрыть ответы к комментарию" type="button" data-ember-action="" data-ember-action-28582="28582">
+          Посмотреть 3 ответа
+            <span class="comment-widget__staff-replied">
+              (ответ преподавателя)
+            </span>
+          <span id="ember28583" class="svg-icon down-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+
+      <span id="ember28584" class="comment-menu ember-view comment-widget__menu"><div id="ember28585" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28586" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28587" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28588" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28589" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28590" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/183255536" id="ember28591" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(8).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28592" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/183255536" id="ember28593" class="ember-view comments-user-badge__name">
+  Павел Дёмкин
+<!----></a>
+</div>
+
+          <time datetime="2022-06-04T20:11:32.000Z" title="суббота, 4 июня 2022 г., 23:11 GMT+3" class="comment-widget__date">
+            2 месяца назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28594" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><pre><code class="hljs stylus">class Point:
+    <span class="hljs-attribute">color</span> = <span class="hljs-string">"Red"</span>
+
+<span class="hljs-selector-tag">a</span> = Point()
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.type</span> = <span class="hljs-string">"circle"</span>
+
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(hasattr(a, <span class="hljs-string">"color"</span>)</span></span>)     <span class="hljs-selector-id">#True</span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(a.__dict__)</span></span>              #{<span class="hljs-string">'type'</span>: <span class="hljs-string">'circle'</span>}
+
+<span class="hljs-keyword">if</span> hasattr(<span class="hljs-selector-tag">a</span>, <span class="hljs-string">"color"</span>):
+    <span class="hljs-selector-tag">del</span> <span class="hljs-selector-tag">a</span>.<span class="hljs-attribute">color</span></code></pre>
+
+<p>Подскажите пожалуйста, как можно отследить наличие атрибута именно у экземпляра?</p>
+
+<p>Например я хочу удалить атрибут, проверяю есть ли он у экземпляра через hasattr().&nbsp;hasattr() укажет что такой атрибут есть(но он есть у класса а не у объекта) и я соответственно его попытаюсь удалить, что вызовет ошибку.&nbsp;</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+            <div class="comment-widget__edited">Изменен Павел Дёмкин
+              <time title="суббота, 4 июня 2022 г., 23:11 GMT+3" datetime="2022-06-04T20:11:56.446Z">
+                2 месяца назад
+              </time>
+            </div>
+    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28595" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28596="28596">
+  <span id="ember28597" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    2
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28598="28598">
+    <span id="ember28599" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28600="28600">
+        Ответить
+      </button>
+
+      <button class="comment-widget__show-replies comment-widget__footer-button btn-link link_no-static-line" title="показать / скрыть ответы к комментарию" type="button" data-ember-action="" data-ember-action-28601="28601">
+          Посмотреть 1 ответ
+<!---->          <span id="ember28602" class="svg-icon down-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+
+      <span id="ember28603" class="comment-menu ember-view comment-widget__menu"><div id="ember28604" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28605" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28606" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28607" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28608" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28609" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/47399643" id="ember28610" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(9).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28611" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/47399643" id="ember28612" class="ember-view comments-user-badge__name">
+  Дмитрий
+<!----></a>
+</div>
+
+          <time datetime="2022-06-02T19:39:59.000Z" title="четверг, 2 июня 2022 г., 22:39 GMT+3" class="comment-widget__date">
+            2 месяца назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28613" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>В видео есть серьезная ошибка. Когда автор говорит про появление атрибутов класса у экземпляров, он говорит что изменяется значение только у экземпляра a, но не у b, но он забывает добавить что это происходит только с неизменяемыми объектами. Если бы в атрибуте color лежала не строка, а например list, то изменив этот атрибут у экземпляра a, он был бы изменен и у b.&nbsp;</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28614" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28615="28615">
+  <span id="ember28616" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    2
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28617="28617">
+    <span id="ember28618" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28619="28619">
+        Ответить
+      </button>
+
+      <button class="comment-widget__show-replies comment-widget__footer-button btn-link link_no-static-line" title="показать / скрыть ответы к комментарию" type="button" data-ember-action="" data-ember-action-28620="28620">
+          Посмотреть 1 ответ
+            <span class="comment-widget__staff-replied">
+              (ответ преподавателя)
+            </span>
+          <span id="ember28621" class="svg-icon down-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+
+      <span id="ember28622" class="comment-menu ember-view comment-widget__menu"><div id="ember28623" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28624" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28625" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28626" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28627" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28628" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/132319234" id="ember28629" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(10).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28630" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/132319234" id="ember28631" class="ember-view comments-user-badge__name">
+  Никита Бабуров
+<!----></a>
+</div>
+
+          <time datetime="2022-06-02T06:36:23.000Z" title="четверг, 2 июня 2022 г., 09:36 GMT+3" class="comment-widget__date">
+            2 месяца назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28632" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Веселое обсуждение по ООП:<br>
+<a href="https://www.quora.com/Is-OO-programming-dead-in-2022" rel="noopener noreferrer nofollow" target="_blank">https://www.quora.com/Is-OO-programming-dead-in-2022</a></p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28633" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28634="28634">
+  <span id="ember28635" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    2
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28636="28636">
+    <span id="ember28637" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28638="28638">
+        Ответить
+      </button>
+
+      <button class="comment-widget__show-replies comment-widget__footer-button btn-link link_no-static-line" title="показать / скрыть ответы к комментарию" type="button" data-ember-action="" data-ember-action-28639="28639">
+          Посмотреть 1 ответ
+<!---->          <span id="ember28640" class="svg-icon down-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+
+      <span id="ember28641" class="comment-menu ember-view comment-widget__menu"><div id="ember28642" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28643" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28644" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28645" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28646" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28647" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/414179683" id="ember28648" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(11).png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28649" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/414179683" id="ember28650" class="ember-view comments-user-badge__name">
+  Yura VS
+<!----></a>
+</div>
+
+          <time datetime="2022-05-31T13:55:04.000Z" title="вторник, 31 мая 2022 г., 16:55 GMT+3" class="comment-widget__date">
+            2 месяца назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28651" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>На старте интересно и понятно</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28652" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28653="28653">
+  <span id="ember28654" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    2
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28655="28655">
+    <span id="ember28656" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28657="28657">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28658" class="comment-menu ember-view comment-widget__menu"><div id="ember28659" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28660" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28661" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28662" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28663" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28664" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/163364935" id="ember28665" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(12).png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28666" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/163364935" id="ember28667" class="ember-view comments-user-badge__name">
+  Александр Александрович
+<!----></a>
+</div>
+
+          <time datetime="2022-07-15T15:23:52.000Z" title="пятница, 15 июля 2022 г., 18:23 GMT+3" class="comment-widget__date">
+            5 дней назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;" data-truncatable="" data-truncated="">
+    <div class="show-more__content">
+      
+              <div id="ember28668" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Напоминалка ! если кто поймет что там написано</p>
+
+<p><img alt="" height="467" name="Классы и обьекты,атрибуты класов и обьектов.png" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/Классы и обьекты,атрибуты класов и обьектов.png" width="874"></p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+                <button class="comment-widget__show-more-toggler btn-details btn-details_theme_primary" aria-expanded="false" type="button">Показать полностью</button>
+            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28669" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28670="28670">
+  <span id="ember28671" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    1
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28672="28672">
+    <span id="ember28673" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28674="28674">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28675" class="comment-menu ember-view comment-widget__menu"><div id="ember28676" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28677" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28678" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28679" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28680" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28681" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/339607280" id="ember28682" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(13).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28683" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/339607280" id="ember28684" class="ember-view comments-user-badge__name">
+  Ланцов Даниил Андреевич
+<!----></a>
+</div>
+
+          <time datetime="2022-07-11T15:04:05.000Z" title="понедельник, 11 июля 2022 г., 18:04 GMT+3" class="comment-widget__date">
+            9 дней назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28685" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Эх, мне бы такого преподавателя в универ )))</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28686" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28687="28687">
+  <span id="ember28688" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    1
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28689="28689">
+    <span id="ember28690" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28691="28691">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28692" class="comment-menu ember-view comment-widget__menu"><div id="ember28693" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28694" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28695" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28696" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28697" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28698" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/284827123" id="ember28699" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(14).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28700" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/284827123" id="ember28701" class="ember-view comments-user-badge__name">
+  Анна
+<!----></a>
+</div>
+
+          <time datetime="2022-06-29T07:50:26.000Z" title="среда, 29 июня 2022 г., 10:50 GMT+3" class="comment-widget__date">
+            21 день назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28702" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span>Наконец то подробный урок по классам! Спасибо !</span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28703" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28704="28704">
+  <span id="ember28705" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    1
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28706="28706">
+    <span id="ember28707" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28708="28708">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28709" class="comment-menu ember-view comment-widget__menu"><div id="ember28710" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28711" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28712" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28713" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28714" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28715" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/17355476" id="ember28716" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(15).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28717" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/17355476" id="ember28718" class="ember-view comments-user-badge__name">
+  Анна Ляченкова
+<!----></a>
+</div>
+
+          <time datetime="2022-06-10T04:43:17.000Z" title="пятница, 10 июня 2022 г., 07:43 GMT+3" class="comment-widget__date">
+            в прошлом месяце
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28719" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Огромное спасибо! Мне очень помог этот урок.</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28720" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28721="28721">
+  <span id="ember28722" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    1
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28723="28723">
+    <span id="ember28724" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28725="28725">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28726" class="comment-menu ember-view comment-widget__menu"><div id="ember28727" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28728" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28729" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28730" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28731" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28732" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/446803014" id="ember28733" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(16).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28734" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/446803014" id="ember28735" class="ember-view comments-user-badge__name">
+  Anonymous 446803014
+<!----></a>
+</div>
+
+          <time datetime="2022-06-07T19:00:19.000Z" title="вторник, 7 июня 2022 г., 22:00 GMT+3" class="comment-widget__date">
+            в прошлом месяце
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28736" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Поясните пожалуйста. Прошел урок 1.2, должно было быть начислено баллов. Но их нет. Почему?&nbsp;</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28737" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28738="28738">
+  <span id="ember28739" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    1
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28740="28740">
+    <span id="ember28741" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28742="28742">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28743" class="comment-menu ember-view comment-widget__menu"><div id="ember28744" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28745" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28746" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28748" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28749" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28750" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/390166854" id="ember28751" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(17).png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28752" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/390166854" id="ember28753" class="ember-view comments-user-badge__name">
+  Страхов Николай
+<!----></a>
+</div>
+
+          <time datetime="2022-06-01T05:24:43.000Z" title="среда, 1 июня 2022 г., 08:24 GMT+3" class="comment-widget__date">
+            2 месяца назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28754" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>а как так понять</p>
+
+<pre><code class="hljs mathematica">class <span class="hljs-keyword">Point</span>:
+    color = <span class="hljs-string">'red'</span>
+    circle = <span class="hljs-number">2</span>
+a = <span class="hljs-keyword">Point</span>()
+b = <span class="hljs-keyword">Point</span>()
+del <span class="hljs-keyword">Point</span>
+print(type(a)) # &lt;class <span class="hljs-string">'__main__.Point'</span>&gt;</code>класс удален а тип Point</pre></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28755" class="vote-widget vote-widget_target_liked ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28756="28756">
+  <span id="ember28757" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+    1
+</span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28758="28758">
+    <span id="ember28759" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28760="28760">
+        Ответить
+      </button>
+
+      <button class="comment-widget__show-replies comment-widget__footer-button btn-link link_no-static-line" title="показать / скрыть ответы к комментарию" type="button" data-ember-action="" data-ember-action-28761="28761">
+          Посмотреть 1 ответ
+<!---->          <span id="ember28762" class="svg-icon down-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+
+      <span id="ember28763" class="comment-menu ember-view comment-widget__menu"><div id="ember28764" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28765" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28766" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28767" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28768" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28769" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/496544972" id="ember28770" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(18).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28771" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/496544972" id="ember28772" class="ember-view comments-user-badge__name">
+  Андрей Еремеев
+<!----></a>
+</div>
+
+          <time datetime="2022-07-19T03:34:10.000Z" title="вторник, 19 июля 2022 г., 06:34 GMT+3" class="comment-widget__date">
+            позавчера
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28773" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Интересная идея "инъекции" атрибута в базовый класс.<br>
+Насколько это соотносится с ООП -- Инкапсуляция? Ведь любой процесс может добавить любое свойство в уже готовый класс и все экземпляры будут танцевать под его дудочку....</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28774" class="vote-widget ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28775="28775">
+  <span id="ember28776" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!----></span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28777="28777">
+    <span id="ember28778" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28779="28779">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28780" class="comment-menu ember-view comment-widget__menu"><div id="ember28781" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28782" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28783" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28784" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28785" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28786" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/470852705" id="ember28787" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(19).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28788" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/470852705" id="ember28789" class="ember-view comments-user-badge__name">
+  Игорь Дудкин
+<!----></a>
+</div>
+
+          <time datetime="2022-07-18T10:42:20.000Z" title="понедельник, 18 июля 2022 г., 13:42 GMT+3" class="comment-widget__date">
+            позавчера
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28790" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Видео-уроки отличные, спасибо! Но было бы совсем здорово, если в дополнение к видео было текстовое изложение. Так многим проще воспринимать информацию, да и времени меньше уходит.</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28791" class="vote-widget ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28792="28792">
+  <span id="ember28793" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!----></span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28794="28794">
+    <span id="ember28795" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28796="28796">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28797" class="comment-menu ember-view comment-widget__menu"><div id="ember28798" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28799" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28800" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28801" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28802" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28803" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/363266836" id="ember28804" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(20).png" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28805" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/363266836" id="ember28806" class="ember-view comments-user-badge__name">
+  Дмитрий Шувалов
+<!----></a>
+</div>
+
+          <time datetime="2022-07-14T14:35:27.000Z" title="четверг, 14 июля 2022 г., 17:35 GMT+3" class="comment-widget__date">
+            6 дней назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28807" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span>Вот мини конспект:
+
+Методы:
+
+setattr(класс,атрибут, значение) - установка атрибута 
+
+getattr(класс,атрибут, false)- получение значения атрибута, или возврат False
+
+del класс.атрибут- удалить атрибут класса
+
+Класс.__doc__ - получить описание класса</span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28808" class="vote-widget ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28809="28809">
+  <span id="ember28810" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!----></span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28811="28811">
+    <span id="ember28812" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28813="28813">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28814" class="comment-menu ember-view comment-widget__menu"><div id="ember28815" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28816" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28817" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28818" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28819" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28820" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/357403901" id="ember28821" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(21).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28822" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/357403901" id="ember28823" class="ember-view comments-user-badge__name">
+  Павел Тулупов
+<!----></a>
+</div>
+
+          <time datetime="2022-07-12T05:10:00.000Z" title="вторник, 12 июля 2022 г., 08:10 GMT+3" class="comment-widget__date">
+            9 дней назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28824" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>За текст песни отдельный поклон!</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28825" class="vote-widget ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28826="28826">
+  <span id="ember28827" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!----></span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28828="28828">
+    <span id="ember28829" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28830="28830">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28831" class="comment-menu ember-view comment-widget__menu"><div id="ember28832" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28833" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28834" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28835" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28836" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28837" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/417056698" id="ember28838" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(22).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28839" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/417056698" id="ember28840" class="ember-view comments-user-badge__name">
+  Евгений Черников
+<!----></a>
+</div>
+
+          <time datetime="2022-06-28T15:13:16.000Z" title="вторник, 28 июня 2022 г., 18:13 GMT+3" class="comment-widget__date">
+            22 дня назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28841" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>эх, чёт не помню уже, чтобы выводили отдельное свойство через дикт.</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28842" class="vote-widget ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28843="28843">
+  <span id="ember28844" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!----></span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28845="28845">
+    <span id="ember28846" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28847="28847">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28848" class="comment-menu ember-view comment-widget__menu"><div id="ember28849" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28850" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28851" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28852" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28853" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28854" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/417056698" id="ember28855" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(22).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28856" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/417056698" id="ember28857" class="ember-view comments-user-badge__name">
+  Евгений Черников
+<!----></a>
+</div>
+
+          <time datetime="2022-06-28T14:51:14.000Z" title="вторник, 28 июня 2022 г., 17:51 GMT+3" class="comment-widget__date">
+            22 дня назад
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28858" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Классное описание для самого начала!</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28859" class="vote-widget ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28860="28860">
+  <span id="ember28861" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!----></span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28862="28862">
+    <span id="ember28863" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28864="28864">
+        Ответить
+      </button>
+
+<!---->
+      <span id="ember28865" class="comment-menu ember-view comment-widget__menu"><div id="ember28866" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28867" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28868" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+        <div data-animation-stop="" id="ember28869" class="comment-widget discussion_replies_hidden ember-view discussions__comment-widget"><div id="ember28870" class="comment-widget-avatar ember-view"><div class="comment-widget-avatar__avatar-block">
+  <span id="ember28871" class="user-avatar ember-view comment-widget-avatar__avatar">  <a href="https://stepik.org/users/226621601" id="ember28872" class="ember-view user-avatar__link">
+    
+      <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/avatar(23).svg" alt="User avatar" class="user-avatar__img user-avatar__img_shape_square" style="width: 35px; height: 35px;">
+
+<!---->  
+  </a>
+</span>
+</div>
+<div class="comment-widget-avatar__main">
+  
+  <div class="comment-widget__body">
+    <div class="comment-widget__header">
+      <div class="comment-widget__header-content">
+<!---->        <div class="comment-widget__titles">
+          <div data-role="student" id="ember28873" class="comments-user-badge ember-view comment-widget__user"><a href="https://stepik.org/users/226621601" id="ember28874" class="ember-view comments-user-badge__name">
+  Татьяна Анатольевна Комиссарова
+<!----></a>
+</div>
+
+          <time datetime="2022-06-19T18:14:00.000Z" title="воскресенье, 19 июня 2022 г., 21:14 GMT+3" class="comment-widget__date">
+            в прошлом месяце
+          </time>
+        </div>
+      </div>
+
+<!---->
+    </div>
+    <div class="comment-widget__content">
+            <div class="show-more" style="--max-height: 480;">
+    <div class="show-more__content">
+      
+              <div id="ember28875" class="html-content rich-text-viewer ember-view comment-widget__comment" data-processed=""><!----><span><p>Скажите, пожалуйста, в каком это редакторе?</p></span></div>
+
+<!---->            
+    </div>
+  </div>
+
+  
+<!---->            
+
+
+<!---->    </div>
+  </div>
+
+  <div class="comment-widget__footer">
+    <div id="ember28876" class="vote-widget ember-view comment-widget__votes"><span class="vote-widget__segment vote-widget__segment_type_epic " title="Одобряю!" role="button" tabindex="0" data-ember-action="" data-ember-action-28877="28877">
+  <span id="ember28878" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__epic-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!----></span>
+
+  <span class="vote-widget__segment vote-widget__segment_type_abuse " title="Не нравится" role="button" tabindex="0" data-ember-action="" data-ember-action-28879="28879">
+    <span id="ember28880" class="svg-icon thumbs-up_icon ember-view vote-widget__icon vote-widget__abuse-icon"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#thumbs-up"></use>
+  </svg></span>
+<!---->  </span>
+</div>
+
+      <button class="comment-widget__reply comment-widget__footer-button btn-link link_no-static-line" title="ответить на этот комментарий" type="button" data-ember-action="" data-ember-action-28881="28881">
+        Ответить
+      </button>
+
+      <button class="comment-widget__show-replies comment-widget__footer-button btn-link link_no-static-line" title="показать / скрыть ответы к комментарию" type="button" data-ember-action="" data-ember-action-28882="28882">
+          Посмотреть 1 ответ
+<!---->          <span id="ember28883" class="svg-icon down-arrow_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#down-arrow"></use>
+  </svg></span>
+      </button>
+
+      <span id="ember28884" class="comment-menu ember-view comment-widget__menu"><div id="ember28885" class="drop-down drop-down-menu ember-view">
+  <div aria-expanded="false" aria-haspopup="true" id="ember28886" class="drop-down__toggler drop-down-toggler drop-down-toggler--auto-toggle ember-view">  
+    <button class="st-button_style_none comment-menu__menu-toggler" type="button">
+      <span id="ember28887" class="svg-icon menu-more_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#menu-more"></use>
+  </svg></span>
+    </button>
+  
+</div>
+
+  <!---->
+
+
+<!----></div>
+</span>
+
+<!---->  </div>
+
+  <div class="comment-widget__replies">
+<!---->  </div>
+
+</div>
+</div>
+</div>
+
+<!----></div>
+
+<div data-theme="tak-confirm-danger" id="ember11668" class="modal-popup ember-view"><!----></div>
+</div>
+    </div>
+  </div>
+
+  <div class="lesson__go-top-wrapper">
+    <button class="st-button_style_none lesson__go-top" type="button" data-ember-action="" data-ember-action-11669="11669">
+      <span id="ember11670" class="svg-icon arrow2-up_icon ember-view"><svg xmlns="http://www.w3.org/2000/svg">
+    <use xlink:href="/static/frontend-build/icons.svg?1658158331#arrow2-up"></use>
+  </svg></span>
+    </button>
+  <div data-tippy-root="" id="tippy-93" style="pointer-events: none; visibility: hidden; position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(-9.6px, -57.6px, 0px);"><div class="tippy-box" data-state="hidden" tabindex="-1" data-animation="fade" role="tooltip" style="max-width: 350px; transition-duration: 150ms;" data-placement="top"><div class="tippy-content" data-state="hidden" style="transition-duration: 150ms;">Наверх</div><div class="tippy-arrow" style="position: absolute; left: 0px; transform: translate3d(33.6px, 0px, 0px);"></div></div></div></div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div data-theme="tak-exam" id="ember11671" class="modal-popup ember-view"><!----></div>
+
+</main>
+
+<!---->
+
+<!---->
+  <footer id="ember110" class="page-footer page-footer-modern ember-view page_footer"><div class="page-footer__container">
+  <div class="page-footer__row">
+      <div class="page-footer__col page-footer__terms">
+        <div class="page-footer__years">
+          © 2013 — 2022. Stepik
+        </div>
+        Наши условия <a href="https://welcome.stepik.org/ru/terms" target="_blank" rel="noopener noreferrer">использования</a> <br>и <a href="https://welcome.stepik.org/ru/privacy" target="_blank" rel="noopener noreferrer">конфиденциальности</a>
+      </div>
+
+      <div class="page-footer__col page-footer__lists">
+        <ul class="page-footer__col  page-footer__list">
+          <li>
+            <a href="https://teach.stepik.org/?utm_source=stepik_catalog&amp;utm_medium=stepik_teach&amp;utm_campaign=footer-2022-05" target="_blank" rel="noopener noreferrer">Авторам курсов</a>
+          </li>
+            <li>
+              <a href="https://teach.stepik.org/ru/for-companies?utm_source=stepik_catalog&amp;utm_medium=stepik_companies&amp;utm_campaign=footer-2022-05" target="_blank" rel="noopener noreferrer">Компаниям</a>
+            </li>
+          <li>
+            <a href="http://support.stepik.org/hc/ru" target="_blank" rel="noopener noreferrer">Помощь</a>
+          </li>
+          <li>
+            <a href="https://welcome.stepik.org/ru/contacts" target="_blank" rel="noopener noreferrer">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="page-footer__col page-footer__list">
+          <li>
+            <a href="https://welcome.stepik.org/ru/about" target="_blank" rel="noopener noreferrer">О проекте</a>
+          </li>
+          <li>
+            <a href="https://welcome.stepik.org/ru/team" target="_blank" rel="noopener noreferrer">Команда</a>
+          </li>
+            <li>
+              <a href="https://welcome.stepik.org/ru/careers" target="_blank" rel="noopener noreferrer">Вакансии</a>
+            </li>
+          <li>
+            <a href="https://welcome.stepik.org/ru/press" target="_blank" rel="noopener noreferrer">Прессе</a>
+          </li>
+        </ul>
+
+        <ul class="page-footer__col page-footer__counters  page-footer__list">
+          <li title="Общее количество отправленных решений на Stepik">
+            <strong>716&nbsp;984&nbsp;019</strong> решений
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-footer__col page-footer__social-links">
+          <a href="https://facebook.com/rustepik" target="_blank" rel="noopener noreferrer" class="page-footer__social-link">
+            <img alt="Facebook" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/footer-fb.svg">
+          </a>
+          <a href="https://twitter.com/rustepik" target="_blank" rel="noopener noreferrer" class="page-footer__social-link">
+            <img alt="Twitter" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/footer-twitter.svg">
+          </a>
+          <a href="https://vk.com/rustepik" target="_blank" rel="noopener noreferrer" class="page-footer__social-link">
+            <img alt="VKontakte" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/footer-vk.svg">
+          </a>
+          <a href="https://instagram.com/stepik.education/" target="_blank" rel="noopener noreferrer" class="page-footer__social-link">
+            <img alt="Instagram" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/footer-instagram.svg">
+          </a>
+      </div>
+  </div>
+
+    <div class="page-footer__row page-footer__row_order_second">
+      <div class="page-footer__col page-footer__apps">
+          <a class="page-footer__mobapp-link" target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/ru/app/id1064581926">
+            <img alt="Get it on Apple Store" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/app-store-badge-ru.svg">
+          </a>
+        <a class="page-footer__mobapp-link" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=org.stepic.droid">
+            <img alt="Get it on Google Play" src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/google-play-badge-ru.png">
+        </a>
+      </div>
+
+      <div class="page-footer__col page-footer__CC-note">
+        Public user contributions licensed under <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license with attribution required
+      </div>
+
+      <a class="page-footer__col" href="https://sk.ru/" target="_blank" rel="noopener noreferrer">
+        <img src="./Шаг 1 · Классы и объекты. Атрибуты классов и объектов · Stepik_files/skolkovo_resident_ru.svg" alt="Skolkovo resident" height="40" width="56">
+      </a>
+    </div>
+
+      <div class="page-footer__build-info" aria-hidden="true" title="Build info:
+- tag 268.0.16181
+- date Mon, 18 Jul 2022 15:32:11 GMT
+- package 0.0.0+1417dd63">
+        268.0.16181
+      </div>
+</div>
+
+<span class="page-footer__ab-group" aria-hidden="true">
+<!----><!----></span>
+</footer>
+
+<div id="ember111" class="loading-overlay-container ember-view"><!----></div>
+
+<!---->
+<div data-theme="confirm" id="ember112" class="modal-popup ember-view"><!----></div>
+
+<div id="ember113" class="modal-popup ember-view upgrade-course-modal-dialog"><!----></div><div data-tippy-root="" id="tippy-130" style="pointer-events: none; visibility: hidden; position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(250.4px, 6004.8px, 0px);"><div class="tippy-box" data-state="hidden" tabindex="-1" data-animation="fade" role="tooltip" style="max-width: 350px; transition-duration: 150ms;" data-placement="right" data-escaped=""><div class="tippy-content" data-state="hidden" style="transition-duration: 150ms;"><div class="lesson-tooltip">
+        <div class="lesson-tooltip__wrapper">
+          <h5 class="lesson-tooltip__header">Первые шаги в ООП</h5>
+<!----><!---->        </div>
+      </div></div><div class="tippy-arrow" style="position: absolute; top: 0px; transform: translate3d(0px, 20px, 0px);"></div></div></div></body></html>
